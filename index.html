@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elite Convergence 4.0 | Branding Your Music</title>
+<meta name="description" content="Elite Convergence 4.0: Branding Your Music. 3rd - 4th Oct 2026, 7PM GMT daily on WhatsApp + Google Meet. Free to join.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Elite Convergence 4.0 | Branding Your Music">
+<meta property="og:description" content="An Experience Of A Lifetime. 3rd - 4th Oct 2026, 7PM GMT daily. Free registration.">
+<meta property="og:image" content="flyer.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #000000;
+    --green: #00FF66;
+    --green-dim: rgba(0, 255, 102, .16);
+    --white: #ffffff;
+    --muted: #b8c4bc;
+    --panel: #0a0f0c;
+    --line: rgba(0, 255, 102, .28);
+    --font: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--font);
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(60% 40% at 50% 0%, rgba(0,255,102,.14), transparent 70%),
+      radial-gradient(50% 35% at 100% 100%, rgba(0,255,102,.08), transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+
+  .wrap { width: min(100% - 2rem, 720px); margin-inline: auto; }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 1.75rem 0 2.5rem; text-align: center; }
+  .presents {
+    margin: 0 0 1.25rem;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .28em;
+    color: var(--white);
+  }
+  .presents b { font-weight: 800; }
+  .presents span { color: var(--green); margin: 0 .5em; }
+
+  .flyer {
+    position: relative;
+    border-radius: 26px;
+    overflow: hidden;
+    background: var(--panel);
+    border: 2px solid var(--green);
+    box-shadow:
+      0 0 0 6px rgba(0,255,102,.08),
+      0 0 38px rgba(0,255,102,.55),
+      0 0 110px rgba(0,255,102,.28);
+    aspect-ratio: 4 / 3;
+  }
+  .flyer img { width: 100%; height: 100%; object-fit: cover; }
+  .flyer.missing::after {
+    content: "Add flyer.jpg next to this file";
+    position: absolute; inset: 0;
+    display: grid; place-items: center;
+    color: var(--muted); font-size: .9rem;
+  }
+  .flyer.missing img { display: none; }
+
+  h1 {
+    margin: 2rem 0 .35rem;
+    font-size: clamp(2.6rem, 12.5vw, 5rem);
+    font-weight: 900;
+    line-height: .98;
+    letter-spacing: -.02em;
+    color: var(--green);
+    text-shadow: 0 0 28px rgba(0,255,102,.45);
+  }
+  .edition {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.05rem;
+  }
+  .tagline { margin: .2rem 0 0; color: var(--muted); font-size: .98rem; }
+
+  .when {
+    margin: 1.25rem 0 0;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  .when em { font-style: normal; color: var(--green); }
+
+  /* ---------- Countdown ---------- */
+  .countdown { margin-top: 1.75rem; }
+  .countdown p.label { margin: 0 0 .75rem; color: var(--muted); font-size: .9rem; }
+  .clock {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .6rem;
+  }
+  .unit {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: .85rem .25rem .7rem;
+  }
+  .unit strong {
+    display: block;
+    font-size: clamp(1.7rem, 8vw, 2.7rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--green);
+    font-variant-numeric: tabular-nums;
+  }
+  .unit span { font-size: .78rem; color: var(--muted); }
+  .status {
+    display: none;
+    padding: 1.1rem;
+    border: 1px solid var(--green);
+    border-radius: 16px;
+    background: var(--green-dim);
+    font-weight: 700;
+  }
+  .countdown.done .clock, .countdown.done p.label { display: none; }
+  .countdown.done .status { display: block; }
+
+  /* ---------- Form ---------- */
+  .register { padding: 1rem 0 3rem; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 26px;
+    padding: 1.75rem 1.25rem;
+  }
+  .card h2 {
+    margin: 0 0 .35rem;
+    font-size: clamp(1.6rem, 6.5vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+  }
+  .card h2 em { font-style: normal; color: var(--green); }
+  .card > p { margin: 0 0 1.4rem; color: var(--muted); font-size: .95rem; }
+
+  .field { margin-bottom: 1rem; }
+  label { display: block; margin-bottom: .4rem; font-size: .9rem; font-weight: 600; }
+  label small { font-weight: 400; color: var(--muted); }
+  input {
+    width: 100%;
+    font: inherit;
+    font-size: 1rem; /* prevents iOS zoom */
+    color: var(--white);
+    background: #000;
+    border: 1.5px solid #2b3a31;
+    border-radius: 14px;
+    padding: .95rem 1rem;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  input::placeholder { color: #6b7a71; }
+  input:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 4px var(--green-dim); }
+  input[aria-invalid="true"] { border-color: #ff5c5c; }
+  .error { min-height: 1.2em; margin: .35rem 0 0; font-size: .82rem; color: #ff8a8a; }
+
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font: inherit;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: .02em;
+    color: #000;
+    background: var(--green);
+    border: 0;
+    border-radius: 16px;
+    padding: 1.1rem 1rem;
+    cursor: pointer;
+    transition: transform .12s, filter .12s;
+  }
+  .btn:hover { filter: brightness(1.08); }
+  .btn:active { transform: scale(.98); }
+  .btn.pulse { animation: pulse 1.8s infinite; }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(0,255,102,.65); }
+    70%  { box-shadow: 0 0 0 18px rgba(0,255,102,0); }
+    100% { box-shadow: 0 0 0 0 rgba(0,255,102,0); }
+  }
+
+  .success {
+    display: none;
+    margin-top: 1.1rem;
+    padding: 1rem;
+    border-radius: 14px;
+    background: var(--green-dim);
+    border: 1px solid var(--green);
+    font-size: .95rem;
+  }
+  .success.show { display: block; }
+  .success a { color: var(--green); font-weight: 700; }
+  .fineprint { margin: 1rem 0 0; text-align: center; font-size: .78rem; color: var(--muted); }
+
+  /* ---------- Footer ---------- */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 2.5rem 0 3rem;
+    text-align: center;
+  }
+  .details {
+    display: grid;
+    gap: .75rem;
+    margin: 0 0 1.75rem;
+    padding: 0;
+    list-style: none;
+  }
+  .details li {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: .9rem 1rem;
+  }
+  .details b { display: block; font-size: .8rem; font-weight: 600; color: var(--muted); }
+  .details span { font-size: 1.1rem; font-weight: 700; }
+  .details span em { font-style: normal; color: var(--green); }
+  .btn.outline {
+    background: transparent;
+    color: var(--green);
+    border: 2px solid var(--green);
+  }
+  .btn.outline:hover { background: var(--green); color: #000; filter: none; }
+  .copy { margin: 1.75rem 0 0; font-size: .8rem; color: var(--muted); }
+
+  @media (min-width: 640px) {
+    .hero { padding-top: 2.5rem; }
+    .card { padding: 2.25rem 2.25rem; }
+    .details { grid-template-columns: repeat(3, 1fr); }
+    .details li { padding: 1.1rem .75rem; }
+    .details span { font-size: 1rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn.pulse { animation: none; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="presents"><b>ELITE CONVERGENCE</b><span>|</span>PRESENTS</p>
+
+    <div class="flyer" id="flyer">
+      <img src="flyer.jpg" alt="Elite Convergence 4.0 flyer: Branding Your Music, 3rd - 4th Oct 2026, 7PM" width="1448" height="1086" fetchpriority="high">
+    </div>
+
+    <h1>Branding Your Music</h1>
+    <p class="edition">Elite Convergence 4.0</p>
+    <p class="tagline">An Experience Of A Lifetime</p>
+    <p class="when">3rd - 4th Oct 2026 &bull; <em>7PM GMT daily</em></p>
+
+    <div class="countdown" id="countdown" aria-live="off">
+      <p class="label">Starts in</p>
+      <div class="clock" role="timer">
+        <div class="unit"><strong id="d">00</strong><span>Days</span></div>
+        <div class="unit"><strong id="h">00</strong><span>Hours</span></div>
+        <div class="unit"><strong id="m">00</strong><span>Minutes</span></div>
+        <div class="unit"><strong id="s">00</strong><span>Seconds</span></div>
+      </div>
+      <div class="status" id="status"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="register" id="register">
+    <div class="wrap">
+      <div class="card">
+        <h2>Register Now - <em>FREE</em></h2>
+        <p>Add your details, then you'll be taken straight to the WhatsApp group where the Google Meet link is shared.</p>
+
+        <form id="regForm" novalidate>
+          <div class="field">
+            <label for="fullName">Full Name*</label>
+            <input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="Your full name" required aria-describedby="nameErr">
+            <p class="error" id="nameErr" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="phone">WhatsApp Number <small>(optional)</small></label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="e.g. +234 801 234 5678">
+          </div>
+          <button type="submit" class="btn pulse">REGISTER &amp; JOIN WHATSAPP GROUP</button>
+        </form>
+
+        <div class="success" id="success" role="status">
+          You're registered. WhatsApp should open in a new tab. If it didn't,
+          <a href="https://chat.whatsapp.com/DDhbBtJWleY3lU7VtpDFTV" target="_blank" rel="noopener">tap here to join the group</a>.
+        </div>
+        <p class="fineprint">Free to attend. Sessions run on WhatsApp and Google Meet.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <ul class="details">
+      <li><b>Date</b><span>3rd - 4th Oct 2026</span></li>
+      <li><b>Time</b><span><em>7PM GMT</em> daily</span></li>
+      <li><b>Venue</b><span>WhatsApp + Google Meet</span></li>
+    </ul>
+    <a class="btn outline" href="https://chat.whatsapp.com/DDhbBtJWleY3lU7VtpDFTV" target="_blank" rel="noopener">Join WhatsApp Directly</a>
+    <p class="copy">&copy; 2026 Elite Convergence. An Experience Of A Lifetime.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var WA_LINK = "https://chat.whatsapp.com/DDhbBtJWleY3lU7VtpDFTV";
+  var STORE_KEY = "elite_convergence_4_registrations";
+
+  /* ----- Flyer fallback ----- */
+  var flyerImg = document.querySelector("#flyer img");
+  flyerImg.addEventListener("error", function () {
+    document.getElementById("flyer").classList.add("missing");
+  });
+
+  /* ----- Countdown (Oct 3 2026, 19:00 GMT) ----- */
+  var START = Date.UTC(2026, 9, 3, 19, 0, 0);
+  var END   = Date.UTC(2026, 9, 5, 0, 0, 0); // end of Oct 4 GMT
+  var box = document.getElementById("countdown");
+  var statusEl = document.getElementById("status");
+  var el = {
+    d: document.getElementById("d"),
+    h: document.getElementById("h"),
+    m: document.getElementById("m"),
+    s: document.getElementById("s")
+  };
+  function pad(n) { return n < 10 ? "0" + n : String(n); }
+
+  function tick() {
+    var now = Date.now();
+    var diff = START - now;
+    if (diff <= 0) {
+      box.classList.add("done");
+      statusEl.textContent = now < END
+        ? "We're live. Join the WhatsApp group now."
+        : "Thanks for joining Elite Convergence 4.0.";
+      return;
+    }
+    var s = Math.floor(diff / 1000);
+    el.d.textContent = pad(Math.floor(s / 86400));
+    el.h.textContent = pad(Math.floor((s % 86400) / 3600));
+    el.m.textContent = pad(Math.floor((s % 3600) / 60));
+    el.s.textContent = pad(s % 60);
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  /* ----- Registration ----- */
+  var form = document.getElementById("regForm");
+  var nameInput = document.getElementById("fullName");
+  var phoneInput = document.getElementById("phone");
+  var nameErr = document.getElementById("nameErr");
+  var success = document.getElementById("success");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = nameInput.value.trim();
+    var phone = phoneInput.value.trim();
+
+    if (!name) {
+      nameInput.setAttribute("aria-invalid", "true");
+      nameErr.textContent = "Enter your full name to register.";
+      nameInput.focus();
+      return;
+    }
+    nameInput.removeAttribute("aria-invalid");
+    nameErr.textContent = "";
+
+    // Open the group first, inside the click handler, so popup blockers allow it.
+    window.open(WA_LINK, "_blank");
+
+    try {
+      var list = JSON.parse(localStorage.getItem(STORE_KEY) || "[]");
+      if (!Array.isArray(list)) list = [];
+      list.push({ name: name, whatsapp: phone, registeredAt: new Date().toISOString() });
+      localStorage.setItem(STORE_KEY, JSON.stringify(list));
+    } catch (err) {
+      /* storage unavailable (private mode etc.); registration still proceeds */
+    }
+
+    success.classList.add("show");
+    form.reset();
+  });
+})();
+</script>
+</body>
+</html>
